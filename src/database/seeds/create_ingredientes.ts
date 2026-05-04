@@ -1,6 +1,6 @@
-import Knex from "knex";
+import { Knex } from "knex";
 
-export async function seed(knex: Knex) {
+export async function seed(knex: Knex): Promise<void> {
   await knex("ingrediente").insert([
     {
       descricao: "Farinha",

@@ -1,9 +1,9 @@
 import knex from "knex";
-import "dotenv/config";
+import { env } from "../config/env";
 
 const connection = knex({
   client: "pg",
-  connection: process.env.NODE_DB_CONNECTION,
+  connection: env.NODE_DB_CONNECTION,
   searchPath: ["knex", "public"],
   useNullAsDefault: true,
 });
